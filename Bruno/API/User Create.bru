@@ -1,0 +1,29 @@
+meta {
+  name: User Create
+  type: http
+  seq: 6
+}
+
+post {
+  url: http://localhost:3000/api/users
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "name": "Zeeshan",
+    "email": "ali@gmail.com",
+    "password": "Ahtisham@143",
+    "role": "Admin"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
+
+docs {
+  This request retrieves a list of users from the JSONPlaceholder API.
+}
